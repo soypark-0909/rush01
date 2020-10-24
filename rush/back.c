@@ -82,6 +82,39 @@ int		check_row_right_height(int n, int index, int *input, int look)
 
 int		check_col_up_height(int n, int index, int *input, int look)
 {
+	int		start;
+	int		end;
+	int		count;
+	int		max;
+	int		flag;
+
+	start = (index % n);
+	end = (index % n) + (n) * (n - 1);
+	count = 1;
+	while (start <= end)
+	{
+		if	(input[start] == 0)
+			break ;
+		if (input[start] == n)
+		{
+			count++;
+			flag = 1;
+			break ;
+		}
+		if (input[start] > max)
+		{
+			max = input[start];
+			count++;
+		}
+		start += n;
+	}
+	if (flag && count == look)
+		return (1);
+	else if(!flag && count < look)
+		return (1);
+	else
+		return (0);
+}
 
 }
 
