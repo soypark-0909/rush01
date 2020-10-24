@@ -126,9 +126,9 @@ int		check_all(int n, int index, int *input, t_look *cons)
 		return (0);
 	else if (!check_row_number(n, index, input))
 		return (0);
-	else if (!check_row_right_height(n, index, input, cons[index / n].left))
+	else if (!check_row_right_height(n, index, input, cons[index / n + 1].left))
 		return (0);
-	else if (!check_row_left_height(n, index, input, cons[index / n].left))
+	else if (!check_row_left_height(n, index, input, cons[index / n + 1].left))
 		return (0);
 	else if (!check_col_up_height(n, index, input, cons[index % n].left ))
 		return (0);
