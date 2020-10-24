@@ -95,6 +95,7 @@ int		check_col_down_height(int n, int index, int *input, int look)
 
 	start = (index % n) + (n) * (n - 1);
 	end = (index % n);
+	count = 0;
 	while (start <= end)
 	{
 		if	(input[start] == 0)
