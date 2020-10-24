@@ -93,7 +93,7 @@ int		check_col_down_height(int n, int index, int *input, int look)
 	int		max;
 	int		flag;
 
-	start = (index % n) + (n)*(n + 1);
+	start = (index % n) + (n) * (n - 1);
 	end = (index % n);
 	while (start <= end)
 	{
@@ -209,8 +209,6 @@ int		ft_atoi(char *str)
 		else
 			return (-1);
 	}
-	//음수나 이상한 스트링에 대한 예외처리 해야함
-	//양수에 대한 인트만 받으면 됨
 	return (result);
 }
 
